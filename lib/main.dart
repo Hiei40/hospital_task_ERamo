@@ -60,6 +60,62 @@ class _MyHomePageState extends State<MyHomePage> {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+        floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterDocked,
+        floatingActionButton: Container(
+          width: 70,
+          height: 70,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black12,
+                blurRadius: 8,
+                offset: Offset(0, 4),
+              ),
+            ],
+          ),
+          child: Material(
+            color: Colors.transparent,
+            shape: const CircleBorder(),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(35),
+              onTap: () {
+                // Action when FAB is tapped
+              },
+              child: Container(
+                height: 60,
+                width: 60,
+                decoration: BoxDecoration(
+                  color: Color(0xff913162),
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.white, width: 5),
+                ),
+                child: SvgPicture.asset("assets/bottom_nav/home.svg",height: 24,width: 24,fit: BoxFit.scaleDown,),
+              ),
+            ),
+          ),
+        ),
+        bottomNavigationBar: BottomAppBar(
+          notchMargin: 0,
+          elevation: 10,
+          color: Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                InkWell(
+                  child: SvgPicture.asset("assets/bottom_nav/chat.svg",height: 24,width: 24,fit: BoxFit.scaleDown,),
+                ),
+
+                InkWell(
+                  child: SvgPicture.asset("assets/bottom_nav/iconamoon_profile-light.svg",height: 24,width: 24,fit: BoxFit.scaleDown,),
+                )
+              ],
+            ),
+          ),
+        ),
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
