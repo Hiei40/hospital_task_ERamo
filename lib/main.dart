@@ -653,11 +653,12 @@ class _MyHomePageState extends State<MyHomePage> {
                               Row(
                                 children: [
                                   Spacer(),
+
                                   Image.asset(
                                     "assets/hospital/follow_period.png",
-                                    height: 240,
+                                    height: 200,
                                     fit: BoxFit.contain,
-                                  ),
+                                  ),         Spacer(),
                                   Spacer(),
                                 ],
                               ),
@@ -736,23 +737,51 @@ class _MyHomePageState extends State<MyHomePage> {
                                                 width: 100,
                                                 height: 90,
                                                 decoration: BoxDecoration(
-                                                  color: const Color(
-                                                    0xff913162,
-                                                  ).withOpacity(0.1),
-                                                  borderRadius:
-                                                      BorderRadius.circular(10),
+                                                  color: const Color(0xff913162).withOpacity(0.1),
+                                                  borderRadius: BorderRadius.circular(10),
                                                 ),
                                                 child: Stack(
                                                   children: [
                                                     Positioned(
                                                       top: 5,
-                                                      left: 10,
-                                                      child: const Icon(
-                                                        Icons.star,
-                                                        color: Color(
-                                                          0xffFDD835,
-                                                        ),
-                                                        size: 10,
+                                                      left: 5,
+                                                      child: Row(
+
+                                                        mainAxisSize: MainAxisSize.min,
+                                                    mainAxisAlignment: MainAxisAlignment.start,
+                                                        crossAxisAlignment: CrossAxisAlignment.center,
+
+                                                        children: [
+                                                          Text(
+                                                            "4.5",
+                                                            style: TextStyle(
+                                                              fontSize: 6,
+                                                              fontWeight: FontWeight.w400,
+                                                            ),
+                                                          ),
+
+                                                        ],
+                                                      ),
+                                                    ),
+
+                                                    Positioned(
+                                                      top: 5,
+                                                      left: 12,
+                                                      child: Row(
+
+                                                        mainAxisSize: MainAxisSize.min,
+                                                        mainAxisAlignment: MainAxisAlignment.start,
+                                                        crossAxisAlignment: CrossAxisAlignment.center,
+
+                                                        children: [
+
+                                                          SizedBox(width: 2), // مسافة صغيرة بين الرقم والنجمة
+                                                          const Icon(
+                                                            Icons.star,
+                                                            color: Color(0xffFDD835),
+                                                            size: 6,
+                                                          ),
+                                                        ],
                                                       ),
                                                     ),
                                                     Center(
@@ -838,7 +867,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       children: [
                                         Container(
                                           height: 220,
-                                          width: 170,
+                                          width: 0.45*MediaQuery.of(context).size.width,
                                           decoration: BoxDecoration(
                                             color: Color(0xff913162),
                                             borderRadius: BorderRadius.only(
@@ -923,7 +952,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       children: [
                                         Container(
                                           height: 220,
-                                          width: 170,
+                                          width: 0.45*MediaQuery.of(context).size.width,
                                           decoration: BoxDecoration(
                                             color: Color(0xff913162),
                                             borderRadius: BorderRadius.only(
