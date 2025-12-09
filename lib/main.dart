@@ -613,7 +613,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         const SizedBox(height: 10),
                         SizedBox(
                           width: 49,
-                          height: 24,
+                          height: 26,
                           child: Text(
                             _serviceNames[index],
                             style: TextStyle(
@@ -659,7 +659,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 30),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Row(
@@ -838,7 +838,9 @@ class _MyHomePageState extends State<MyHomePage> {
     required String services,
   }) {
     return Container(
-      height: 220,
+      constraints: BoxConstraints(
+        minHeight: 250
+      ),
       decoration: BoxDecoration(
         color: const Color(0xff913162),
         borderRadius: BorderRadius.only(
